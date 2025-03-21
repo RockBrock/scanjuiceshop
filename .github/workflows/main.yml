@@ -16,7 +16,7 @@ jobs:
       - name: Run docker image
         run:  |
           docker pull bkimminich/juice-shop 
-          docker run -d -p 127.0.0.1:3000:3000 bkimminich/juice-shop
+          docker run -d -p 3000:3000 bkimminich/juice-shop
           
       - name: Perform ZAP full scan
         uses: zaproxy/action-full-scan@v0.12.0
